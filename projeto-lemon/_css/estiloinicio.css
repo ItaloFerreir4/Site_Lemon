@@ -1,0 +1,603 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@font-face {
+    font-family: Montserrat;
+    src: url(../_fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../_fonts/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../_fonts/Lato-Regular.ttf);
+}
+
+body{
+    max-width: 1920px;
+}
+
+header{
+   position: fixed;
+   z-index: 999;
+   left: 0;
+   top: 0;
+}
+
+.top{
+    width: 1920px;
+    height: 40px;
+    background: #42984F 0% 0% no-repeat padding-box;
+}
+
+.info{
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+#telefone{
+    position: absolute;
+    top: 11px;
+    left: 937px;
+    width: 200px;
+    height: 18px;
+    padding-right: 54px;
+}
+
+#email{
+    position: absolute;
+    top: 11px;
+    left: 1086px;
+}
+
+#orcamento{
+    position: absolute;
+    top: 5px;
+    left: 1344px;
+    padding: 6px 10px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #3C3D41;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+#orcamento a{
+    padding: 0;
+}
+
+.center{
+    width: 1920px;
+    height: 120px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 15px #00000029;
+}
+
+#imglogo{
+    margin-top: 10px;
+    margin-left: 397px;
+    width: 150px;
+    height: 100px;  
+}
+
+nav{
+    margin-top: -60px; 
+    margin-left: 980px;
+}
+
+header li{
+    display: inline;
+    text-align: left;
+}
+
+header a{
+    text-decoration: none;
+    padding-left: 35px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #3C3D41;
+}
+
+#face, #insta{
+    margin-left: 20px;
+    padding: 0;
+}
+
+section{
+    margin-top: 160px;
+}
+
+a,img {
+    border: none;
+}
+.trs {
+    -webkit-transition:all ease-out 0.5s;
+    -moz-transition:all ease-out 0.5s;
+    -o-transition:all ease-out 0.5s;
+    -ms-transition:all ease-out 0.5s;
+    transition:all ease-out 0.5s;
+}  
+#slider {
+    position: relative; 
+    z-index: 1;
+}
+#slider a { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.ativo {
+    opacity: 1!important; 
+    filter:alpha(opacity=100)!important;
+}
+
+span {
+    background: #FFFFFF; 
+    cursor: pointer; 
+    opacity: 1;
+    filter:alpha(opacity=0); 
+    position: absolute; 
+    bottom: 40%; 
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    z-index: 5;
+}
+.next {
+    right: 60px;
+}
+
+.next:before,.next:after {
+    left: 60px;
+}
+
+.next:before {
+    top: 5px;
+}
+
+.next:after {
+    top: 19px;
+}
+
+.next:after{
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    border-left: 12px solid #1E1E1E;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: -79%;
+}
+
+.prev:before{
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent; 
+    border-right: 12px solid #1E1E1E;
+    position: absolute;
+    margin-top: 24%;
+    margin-left: -1px;
+}
+
+.prev {
+    left: 60px;
+}
+
+.prev:before,.prev:after {
+    left: 18px;
+}
+
+.prev:before {
+    top: 5px;
+}
+.prev:after {
+    top: 19px;
+}
+
+figure:hover span {
+    opacity: 0.76;
+    filter:alpha(opacity=76);
+}
+
+figure {
+    max-width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.legenda-slide{
+    position: absolute;
+    z-index: 4;
+    margin-top: 139px;
+    margin-left: 967px;
+}
+
+.legenda-slide h1{
+    top: 0px;
+    left: 0px;
+    width: 247px;
+    height: 79px;
+    text-align: left;
+    font: normal normal 900 65px/43px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.legenda-slide h2{
+    margin-top: -40px;
+    width: 500px;
+    height: 43px;
+    text-align: left;
+    font: normal normal bold 35px/43px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.legenda-slide h3{
+    margin-top: 75px;
+    width: 553px;
+    height: 24px;
+    text-align: left;
+    font: normal normal normal 20px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.legenda-slide p{
+    margin-top: 50px;
+    top: 72px;
+    left: 0px;
+    width: 373px;
+    height: 18px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.legenda-slide li{
+    text-decoration: none;
+    display: inline;
+}
+
+.legenda-slide li a{
+    position: absolute;
+    margin-top: 30px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.legenda-slide .corpo-flecha{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 250px;
+    width: 50px;
+    border: 3px solid #1E1E1E;
+}
+
+.legenda-slide .flecha-slide{
+    position: absolute;
+    margin-top: 31px;
+    margin-left: 300px;
+    width: 0; 
+    height: 0; 
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent; 
+    border-left: 12px solid #1E1E1E;
+}
+
+.empresa{
+    margin-top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 822px;
+    background-image: url("../_imagens/sabor.png");
+    border: 1px solid #707070;
+}
+
+#limaosabor{
+    margin-top: 38px;
+    margin-left: 940px;
+    position: absolute;
+}
+
+.empresa h1{
+    margin-top: 113px;
+    margin-left: 397px;
+    width: 500px;
+    height: 92px;
+    text-align: left;
+    font: normal normal 900 75px/73px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.empresa h2{
+    margin-top: 60px;
+    margin-left: 397px;
+    width: 500px;
+    height: 73px;
+    text-align: left;
+    font: normal normal 900 60px/73px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.textoempresa{
+    margin-top: 100px;
+    margin-left: 397px;
+    width: 527px;
+    height: 168px;
+    margin-bottom: 161px;
+    margin-left: 397px;
+    text-align: left;
+    font: normal normal normal 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.textoempresa li{
+    text-decoration: none;
+    display: inline;
+}
+
+.textoempresa li a{
+    position: absolute;
+    margin-top: 30px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.textoempresa .corpo-flecha{
+    position: absolute;
+    margin-top: 35.4px;
+    margin-left: 170px;
+    width: 50px;
+    border: 3px solid #FFFFFF;
+}
+
+.textoempresa .flecha-slide{
+    position: absolute;
+    margin-top: 31px;
+    margin-left: 220px;
+    width: 0; 
+    height: 0; 
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent; 
+    border-left: 12px solid #FFFFFF;
+}
+
+.linhaproduto{
+    top: 1580px;
+    left: 0px;
+    width: 100%;
+    height: 623px;
+    background-image: url("../_imagens/praia-fundo.png");
+}
+
+#titulolinha{
+    position: absolute;
+    margin-top: 44px;
+    left: 701px;
+    width: 519px;
+    height: 43px;
+    text-align: center;
+    font: normal normal bold 35px/43px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+}
+
+.carousel.slide{
+    margin-top: 137px;
+    margin-left: 398px;
+    position: absolute;
+    width: 60%;
+    height: 438px;
+}
+
+.carousel-indicators{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+
+#indicator{
+    background: #CCCCCC 0% 0% no-repeat padding-box;
+}
+
+.col-sm-3.col-xs-6{
+    height: 368px;
+}
+
+.carousel.slide img {
+    width: 80%;
+    height: auto;
+}
+
+.legenda-carrosel{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -10px;
+    width: 216px;
+    height: 48px;
+    text-align: center;
+    font: normal normal bold 20px/24px Montserrat-Bold;
+    color: #3C3D41;
+}
+
+.rodape{
+    width: 100%;
+    height: 321px;
+    background: #3C3D41 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.institucional{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 397px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.institucional h4{
+    margin-bottom: 20px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.institucional li{
+    text-decoration: none;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.nossos-produtos{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 682px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.nossos-produtos h4{
+    margin-bottom: 20px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.nossos-produtos li{
+    padding-bottom: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.endereco{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 967px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.endereco h4{
+    margin-bottom: 20px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.endereco li{
+    width: 250px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.endereco p{
+    margin-top: -9px;
+    margin-left: 20px;
+}
+
+#bloc-endereco{
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+.sobre{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1252px;
+    text-align: left;
+    font: normal normal normal 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.sobre h4{
+    margin-bottom: 20px;
+    text-align: left;
+    font: normal normal bold 14px/18px Montserrat-Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.sobre li{
+    width: 258px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.direitos{
+    width: 100%;
+    height: 40px;
+    background: #42984F 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.direitos p{
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 397px;
+    text-align: left;
+    font: normal normal normal 16px/19px Lato;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.direitos a{
+    text-align: left;
+    font: normal normal bold 16px/19px Lato;
+    letter-spacing: 0px;
+    color: #00E5FF;
+}
+
+.direitos li{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 1452px;
+    text-decoration: none;
+    display: block;
+}
+
+#img2{
+    margin-left: 50px;
+}

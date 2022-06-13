@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lemon</title>
+        <link rel="stylesheet" type="text/css" href="../projeto-lemon/_css/estiloproduto.css">
+        <script>
+            function opentabela(evt, informa) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(informa).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <div class="info">
+                    <li id="telefone"><img src="../projeto-lemon/_imagens/whatsapp-logo.png" alt=""> (17) 3022-37-3715</li>    
+                    <li id="email"><img src="../projeto-lemon/_imagens/mail.png" alt=""> COMERCIAL@LEMON.COM.BR</li>  
+                    <li id="orcamento"><a href="#">PEDIR UM ORÇAMENTO</a></li>
+                </div>
+            </div>
+            <div class="center">
+                <div class="logo">
+                    <img src="../projeto-lemon/_imagens/logo-150-100.png" id="imglogo">
+                </div>
+                <nav>
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                    <li><a href="#">QUEM SOMOS</a></li>
+                    <li><a href="produto.html">PRODUTOS</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="#" id="face"><img src="../projeto-lemon/_imagens/facebook-v9.png" alt=""></a></li>
+                    <li><a href="#" id="insta"><img src="../projeto-lemon/_imagens/instagram-v9.png" alt=""></a></li>
+                </nav>
+            </div>
+        </header>
+        <section>
+           <div class="descricao">
+                <img src="../projeto-lemon/_imagens/refrigerante-limao-600-600.png" alt="">
+                <li><h1>VITA COCO</h1></li>
+                <li id="subtitulo"><p>Água de coco pura com limão</p></li>
+                <li id="conteudoDescricao"><p>A Vita Coco é o suco da Lemon de água de coco e mistura de limonada natural. Todos os benefícios da água de coco e suco do limão em um lugar só. <p>Excelente fonte de <h5>energia e vitaminas.</h5></p> <p> Todo o processo de fabricação é realizado com baixo nível de industrialização.</p></p></li>
+           </div>
+           <div class="tabela">
+                <div class="tab">
+                  <button class="tablinks" onclick="opentabela(event, 'nutri')" id="botao1">Tabela Nutricional</button>
+                  <button class="tablinks" onclick="opentabela(event, 'ingred')">Ingredientes</button>
+                  <button class="tablinks" onclick="opentabela(event, 'tecn')">Ficha Técnica</button>
+                </div>
+                
+                <div id="nutri" class="tabcontent">
+                    <h3 id="quant">Quantidade por porção - 200 mL (1 copo)</h3>
+                    <h3 id="vd">%VD (*)</h3>
+                    <div class="nomes">
+                        <li><h4>Valor Energético</h4></li>
+                        <li><h4>Carboidratos</h4></li>
+                        <li><h4>Açúcares</h4></li>
+                        <li><h4>Sódio</h4></li>
+                        <li><h4 class="ultimoTabela">Potássio</h4></li>
+                    </div>
+                    <div class="valores">
+                        <li><h4>60 Kcal / 253 KJ</h4></li>
+                        <li><h4>15 g</h4></li>
+                        <li><h4>15 g</h4></li>
+                        <li><h4>0 mg</h4></li>
+                        <li><h4 id="ultimoTabela">31 mg</h4></li>
+                    </div>
+                    <div class="porcentagem">
+                        <li><h4>3%</h4></li>
+                        <li><h4>5%</h4></li>
+                        <li><h4>0</h4></li>
+                        <li><h4>**</h4></li>
+                        <li><h4 id="ultimoTabela">**</h4></li>
+                    </div>
+                </div>
+                
+                <div id="ingred" class="tabcontent">
+                    <h3>CONTEUDO</h3>
+                </div>
+                
+                <div id="tecn" class="tabcontent">
+                    <h3>CONTEUDO</h3>
+                </div>               
+            </div>
+           <div class="pedido">
+                <li><h1>FAZER PEDIDO</h1><h2>VITA COCO</h2></li>
+                <li><h4>COMPRAR AGORA</h4></li>
+                <li class="corpo-flecha"></li>
+                <li class="flecha-slide"></li>
+                
+                <img src="../projeto-lemon/_imagens/cart.png" alt="">
+           </div>
+        </section>
+        <footer>
+            <div class="rodape">
+                <div class="institucional">
+                    <h4>INSTITUCIONAL</h4>
+                    <li>Página Inicial</li>
+                    <li>Quem Somos</li>
+                    <li>Produtos</li>
+                    <li>Contato</li>
+                </div>
+                <div class="nossos-produtos">
+                    <h4>NOSSOS PRODUTOS</h4>
+                    <li>Geleia de limão</li>
+                    <li>Suco de limão</li>
+                    <li>Refrigerante de limão</li>
+                    <li>Tortinha de limão</li>
+                    <li>Bolo de limão</li>
+                    <li>Barrinha de limão</li>
+                </div>
+                <div class="endereco">
+                    <h4>CONTATO & ENDEREÇO</h4>
+                    <li><img src="../projeto-lemon/_imagens/maps-and-flags-fff.png" alt=""><p id="bloc-endereco">Avenida México, 688 - Jardim Primavera <p>São José do Rio Preto - SP</p></p></li>
+                    <li><img src="../projeto-lemon/_imagens/whatsapp-logo.png" alt=""> (17) 3022-3715</li>
+                    <li><img src="../projeto-lemon/_imagens/mail.png" alt=""> COMERCIAL@LEMON.COM.BR</li>
+                </div>
+                <div class="sobre">
+                    <h4>SOBRE</h4>
+                    <li>A Lemon é uma empresa que atua desde 1995 na comercialização de produtos derivados da fruta limão. Nosso grande diferencial é a qualidade e o carinho que colocamos na produção de cada um de nossos produtos.</li>
+                </div>
+            </div>
+            <div class="direitos">
+                <p>2020 © LEMON EXAMPLE. Todos os direitos reservados. Desenvolvimento <a href="">Italo Ferreira</a></p>
+                <li><img src="../projeto-lemon/_imagens/Imagem 2.png" alt="" id="img1"></li>
+                <li><img src="../projeto-lemon/_imagens/Imagem 2.png" alt="" id="img2"></li>
+            </div>
+        </footer>    
+    </body>
+</html>

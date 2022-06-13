@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lemon</title>
+        <link rel="stylesheet" type="text/css" href="../projeto-lemon/_css/estiloinicio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript">
+
+            $('#carousel-example-generic').carousel();
+
+            function setaImagem(){
+                var settings = {
+                    primeiraImg: function(){
+                        elemento = document.querySelector("#slider a:first-child");
+                        elemento.classList.add("ativo");
+                        this.legenda(elemento);
+                    },
+            
+                    slide: function(){
+                        elemento = document.querySelector(".ativo");
+            
+                        if(elemento.nextElementSibling){
+                            elemento.nextElementSibling.classList.add("ativo");
+                            settings.legenda(elemento.nextElementSibling);
+                            elemento.classList.remove("ativo");
+                        }else{
+                            elemento.classList.remove("ativo");
+                            settings.primeiraImg();
+                        }
+            
+                    },
+            
+                    proximo: function(){
+                        clearInterval(intervalo);
+                        elemento = document.querySelector(".ativo");
+            
+                        if(elemento.nextElementSibling){
+                            elemento.nextElementSibling.classList.add("ativo");
+                            settings.legenda(elemento.nextElementSibling);
+                            elemento.classList.remove("ativo");
+                        }else{
+                            elemento.classList.remove("ativo");
+                            settings.primeiraImg();
+                        }
+                        intervalo = setInterval(settings.slide,4000);
+                    },
+            
+                    anterior: function(){
+                        clearInterval(intervalo);
+                        elemento = document.querySelector(".ativo");
+            
+                        if(elemento.previousElementSibling){
+                            elemento.previousElementSibling.classList.add("ativo");
+                            settings.legenda(elemento.previousElementSibling);
+                            elemento.classList.remove("ativo");
+                        }else{
+                            elemento.classList.remove("ativo");                     
+                            elemento = document.querySelector("a:last-child");
+                            elemento.classList.add("ativo");
+                            this.legenda(elemento);
+                        }
+                        intervalo = setInterval(settings.slide,4000);
+                    },
+            
+                    legenda: function(obj){
+                        var legenda = obj.querySelector("img").getAttribute("alt");
+                        document.querySelector("figcaption").innerHTML = legenda;
+                    }
+            
+                }
+            
+                settings.primeiraImg();
+                    
+                var intervalo = setInterval(settings.slide,4000);
+                document.querySelector(".next").addEventListener("click",settings.proximo,false);
+                document.querySelector(".prev").addEventListener("click",settings.anterior,false);
+            }
+            
+            window.addEventListener("load",setaImagem,false);
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <div class="info">
+                    <li id="telefone"><img src="../projeto-lemon/_imagens/whatsapp-logo.png" alt=""> (17) 3022-37-3715</li>    
+                    <li id="email"><img src="../projeto-lemon/_imagens/mail.png" alt=""> COMERCIAL@LEMON.COM.BR</li>  
+                    <li id="orcamento"><a href="#">PEDIR UM ORÇAMENTO</a></li>
+                </div>
+            </div>
+            <div class="center">
+                <div class="logo">
+                    <img src="../projeto-lemon/_imagens/logo-150-100.png" id="imglogo">
+                </div>
+                <nav>
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                    <li><a href="#">QUEM SOMOS</a></li>
+                    <li><a href="produto.html">PRODUTOS</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="#" id="face"><img src="../projeto-lemon/_imagens/facebook-v9.png" alt=""></a></li>
+                    <li><a href="#" id="insta"><img src="../projeto-lemon/_imagens/instagram-v9.png" alt=""></a></li>
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="conteudo">
+                <div class="slide">
+                    <div class="legenda-slide">
+                        <h1>LEMON</h1>
+                        <h2>PRODUTOS DERIVADOS DO LIMÃO</h2>
+                        <h3>A LEMON POSSUI UMA EXTENSA GAMA DE PRODUTOS, E TODOS DERIVADOS DESTA DELICIOSA FRUTA.</h3>
+                        <p>CLIQUE NO BOTÃO ABAIXO E CONHEÇA TODOS ELES.</p>
+                        <li><a href="#">TODOS OS PRODUTOS LEMON</a></li>
+                        <li class="corpo-flecha"></li>
+                        <li class="flecha-slide"></li>
+                        
+                    </div>
+                    <figure>
+                        <span class="trs next"></span>
+                        <span class="trs prev"></span>
+                     
+                        <div id="slider">
+                           <a href="#" class="trs"><img src="../projeto-lemon/_imagens/banner-slider-produtos-1920-600-02.png" alt=""/></a>
+                           <a href="#" class="trs"><img src="../projeto-lemon/_imagens/banner-slider-produtos-1920-600-02.png" alt=""/></a>
+                        </div>
+                     
+                        <figcaption></figcaption>
+                    </figure>
+                   
+                </div>
+                <div class="empresa">
+                    <img id="limaosabor" src="../projeto-lemon/_imagens/lemon-juice-sampar-drinking-water-19.png" alt="">
+                    <h1>SABOR E SAÚDE </h1>
+                    <h2>CAMINHANDO LADO A LADO</h2>
+                    <div class="textoempresa">
+                        <p>A Lemon é uma empresa que tem como principal objetivo trazer o sabor do limão orgânico em todos os produtos, alinhado à uma produção sustentável e consciente.</p>
+                        <p>Mudar a forma de ver o alimento e seus benefícios é nossa principal missão.</p>
+                        <li><a href="#">CONHECER A LEMON</a></li>
+                        <li class="corpo-flecha"></li>
+                        <li class="flecha-slide"></li>
+                    </div>   
+                </div>
+                <div class="linhaproduto">
+                    <h1 id="titulolinha">PRODUTOS DA NOSSA LINHA</h1>
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active" id="indicator"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1" id="indicator"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2" id="indicator"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner"> 
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6"> 
+                                        <a href="../projeto-lemon/produto.html"><img src="../projeto-lemon/_imagens/bolo-600-600.png" alt=""/></a> 
+                                        <h2 class="legenda-carrosel">SUCO DE LIMÃO COM COCO</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="rodape">
+                <div class="institucional">
+                    <h4>INSTITUCIONAL</h4>
+                    <li>Página Inicial</li>
+                    <li>Quem Somos</li>
+                    <li>Produtos</li>
+                    <li>Contato</li>
+                </div>
+                <div class="nossos-produtos">
+                    <h4>NOSSOS PRODUTOS</h4>
+                    <li>Geleia de limão</li>
+                    <li>Suco de limão</li>
+                    <li>Refrigerante de limão</li>
+                    <li>Tortinha de limão</li>
+                    <li>Bolo de limão</li>
+                    <li>Barrinha de limão</li>
+                </div>
+                <div class="endereco">
+                    <h4>CONTATO & ENDEREÇO</h4>
+                    <li><img src="../projeto-lemon/_imagens/maps-and-flags-fff.png" alt=""><p id="bloc-endereco">Avenida México, 688 - Jardim Primavera <p>São José do Rio Preto - SP</p></p></li>
+                    <li><img src="../projeto-lemon/_imagens/whatsapp-logo.png" alt=""> (17) 3022-3715</li>
+                    <li><img src="../projeto-lemon/_imagens/mail.png" alt=""> COMERCIAL@LEMON.COM.BR</li>
+                </div>
+                <div class="sobre">
+                    <h4>SOBRE</h4>
+                    <li>A Lemon é uma empresa que atua desde 1995 na comercialização de produtos derivados da fruta limão. Nosso grande diferencial é a qualidade e o carinho que colocamos na produção de cada um de nossos produtos.</li>
+                </div>
+            </div>
+            <div class="direitos">
+                <p>2020 © LEMON EXAMPLE. Todos os direitos reservados. Desenvolvimento <a href="">Italo Ferreira</a></p>
+                <li><img src="../projeto-lemon/_imagens/Imagem 2.png" alt="" id="img1"></li>
+                <li><img src="../projeto-lemon/_imagens/Imagem 2.png" alt="" id="img2"></li>
+            </div>
+        </footer>    
+    </body>
+</html>
